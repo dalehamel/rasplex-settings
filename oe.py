@@ -57,7 +57,7 @@ _ = __addon__.getLocalizedString
 __busy__ = 0
 xbmcIsPlaying = 0
 input_request = False
-temp_dir = '/storage/.xbmc/temp/'
+temp_dir = '/storage/.plexht/temp/'
 
 dictModules = {}
 listObject = {
@@ -88,9 +88,9 @@ except:
 dbusSystemBus = dbus.SystemBus()
 
 try:
-    configFile = '/storage/.xbmc/userdata/addon_data/service.openelec.settings/oe_settings.xml'
-    if not os.path.exists('/storage/.xbmc/userdata/addon_data/service.openelec.settings'):
-        os.makedirs('/storage/.xbmc/userdata/addon_data/service.openelec.settings')
+    configFile = '/storage/.plexht/userdata/addon_data/service.openelec.settings/oe_settings.xml'
+    if not os.path.exists('/storage/.plexht/userdata/addon_data/service.openelec.settings'):
+        os.makedirs('/storage/.plexht/userdata/addon_data/service.openelec.settings')
 except:
     pass
 

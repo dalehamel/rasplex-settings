@@ -216,9 +216,9 @@ class system:
             self.lcd_dir = '/usr/lib/lcdproc/'
             self.envFile = '/storage/oe_environment'
             self.keyboard_layouts = False
-            self.update_url_release = 'http://releases.openelec.tv'            
-            self.update_url_devel = 'http://snapshots.openelec.tv'
-            self.temp_folder = os.environ['HOME'] + '/.xbmc/temp/'
+            self.update_url_release = 'http://sourceforge.net/projects/rasplex/files/autoupdate/rasplex'            
+            self.update_url_devel = 'http://sourceforge.net/projects/rasplex/files/autoupdate/rasplexdev'
+            self.temp_folder = os.environ['HOME'] + '/.plexht/temp/'
             self.update_folder = '/storage/.update/'
             self.last_update_check = 0
             self.xbmc_reset_file = '/storage/.cache/reset_xbmc'
@@ -228,7 +228,7 @@ class system:
             self.udev_keyboard_file = '/storage/.cache/xkb/layout'
             self.bt_daemon = '/usr/lib/bluetooth/bluetoothd'
 
-            self.backup_dirs = ['/storage/.xbmc', '/storage/.config',
+            self.backup_dirs = ['/storage/.plexht', '/storage/.config',
                                 '/storage/.cache']
             self.backup_file = 'openelec_backup.zip'
             self.restore_path = '/storage/.restore/'
@@ -1289,13 +1289,13 @@ class system:
                         if os.path.exists('/var/log/messages.0'):
                             zip.write('/var/log/messages.0',
                                     'messages.0')
-                        if os.path.exists('/storage/.xbmc/temp/xbmc.log'
+                        if os.path.exists('/storage/.plexht/temp/xbmc.log'
                                 ):
-                            zip.write('/storage/.xbmc/temp/xbmc.log',
+                            zip.write('/storage/.plexht/temp/xbmc.log',
                                     'xbmc.log')
-                        if os.path.exists('/storage/.xbmc/temp/xbmc.old.log'
+                        if os.path.exists('/storage/.plexht/temp/xbmc.old.log'
                                 ):
-                            zip.write('/storage/.xbmc/temp/xbmc.old.log'
+                            zip.write('/storage/.plexht/temp/xbmc.old.log'
                                     , 'xbmc.old.log')
 
                         os.system('lspci -v >/tmp/lspci')
